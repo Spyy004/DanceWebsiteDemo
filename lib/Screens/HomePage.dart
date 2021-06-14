@@ -2,6 +2,7 @@ import 'package:dancewebsite/Screens/firstpage.dart';
 import 'package:dancewebsite/Screens/fourthpage.dart';
 import 'package:dancewebsite/Screens/secondpage.dart';
 import 'package:dancewebsite/Screens/thirdpage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class HomePage extends StatefulWidget {
@@ -17,34 +18,36 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.transparent,
           title: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               InkWell(
                   onTap: (){
                     p1.animateToPage(0, duration: Duration(milliseconds: 800), curve: Curves.easeIn);
                   },
-                  child: Text("HOME  ",style: GoogleFonts.dmSans(color: Colors.purple[100],fontSize: 17,fontWeight: FontWeight.bold),
+                  child: Text("HOME  ",style: GoogleFonts.dmSans(color: Colors.orange,fontSize: 17,fontWeight: FontWeight.bold),
                   ),
               ),
               InkWell(
                   onTap: (){
                     p1.animateToPage(1, duration: Duration(milliseconds: 800), curve: Curves.easeIn);
                   },
-                  child: Text("GALLERY  ",style: GoogleFonts.dmSans(color: Colors.purple[100],fontSize: 17,fontWeight: FontWeight.bold))),
+                  child: Text("GALLERY  ",style: GoogleFonts.dmSans(color: Colors.orange,fontSize: 17,fontWeight: FontWeight.bold))),
               InkWell(
                   onTap: (){
                     p1.animateToPage(2, duration: Duration(milliseconds: 800), curve: Curves.easeIn);
                   },
-                  child: Text("EVENTS  ",style: GoogleFonts.dmSans(color: Colors.purple[100],fontSize: 17,fontWeight: FontWeight.bold)
+                  child: Text("EVENTS  ",style: GoogleFonts.dmSans(color: Colors.orange,fontSize: 17,fontWeight: FontWeight.bold)
                   )
               ),
               InkWell(
                   onTap: (){
                     p1.animateToPage(3, duration: Duration(milliseconds: 800), curve: Curves.easeIn);
                   },
-                  child: Text("ABOUT US  ",style: GoogleFonts.dmSans(color: Colors.purple[100],fontSize: 17,fontWeight: FontWeight.bold)))
+                  child: Text("ABOUT US  ",style: GoogleFonts.dmSans(color: Colors.orange,fontSize: 17,fontWeight: FontWeight.bold)))
             ],
           ),
           elevation: 0,
