@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -44,14 +45,47 @@ class _FirstPageState extends State<FirstPage> {
             color: Colors.white,
           ),
         ),*/
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("images/background.png"),
-              fit: BoxFit.cover,
+        body: SizedBox.expand(
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("images/background.png"),
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 350),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 100),
+                    child: Text("Welcome to IIITG\n    D-Dazzlers",
+                        style:
+                        GoogleFonts.dancingScript(
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold,
+                        ),
+                    ),
+                  ),
 
+                  Padding(
+                    padding: const EdgeInsets.only(top: 90,left: 60),
+                    child: Text(
+                        "The first dance is the worst dance,\n  The last dance is the best dance.\nAll the roads of persistent practice\n   Lead to the Land of Perfection!",
+                      style: GoogleFonts.openSans(
+                        color: Color(0xFF03989E),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+
+                ],
+              ),
+            ),
+
+
+          ),
         ),
       );
 
